@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "D:\pythonworkspace\CRMRobot\auto.py", line 46, in set_value
+    elem.click()
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webelement.py", line 628, in _execute
+    return self._parent.execute(command, params)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 312, in execute
+    self.error_handler.check_response(response)
+  File "D:\python\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 237, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: Element <div class="mini-grid-cell-inner  mini-grid-cell-nowrap "> is not clickable at point (1152.7749938964844,777) because another element <div id="ShowBolightBox"> obscures it
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/pythonworkspace/CRMRobot/page.py", line 197, in autoInput
+    self.crmAuto.auto_input()
+  File "D:\pythonworkspace\CRMRobot\auto.py", line 176, in auto_input
+    self.excel.get_cell_value(self.excel.WIFI, self.row_index, "¹¤ÉÌÖ´ÕÕ"))
+  File "D:\pythonworkspace\CRMRobot\auto.py", line 59, in set_value
+    traceback.print_exc(e)
+  File "D:\python\lib\traceback.py", line 159, in print_exc
+    print_exception(*sys.exc_info(), limit=limit, file=file, chain=chain)
+  File "D:\python\lib\traceback.py", line 100, in print_exception
+    type(value), value, tb, limit=limit).format(chain=chain):
+  File "D:\python\lib\traceback.py", line 497, in __init__
+    capture_locals=capture_locals)
+  File "D:\python\lib\traceback.py", line 332, in extract
+    if limit >= 0:
+TypeError: '>=' not supported between instances of 'ElementClickInterceptedException' and 'int'
+Traceback (most recent call last):
+  File "D:/pythonworkspace/CRMRobot/page.py", line 221, in autoInput
+    self.crmAuto.auto_input()
+  File "D:\pythonworkspace\CRMRobot\auto.py", line 277, in auto_input
+    elem = self.wait.until(EC.element_to_be_clickable((By.XPATH, self.xpath.get_wifi_xpath("service_item"))))
+  File "D:\python\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
